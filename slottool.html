@@ -99,7 +99,8 @@
 <h2 id="3ds-slottool-guide">3DS slotTool Guide</h2>
 <p>This page is intended for the installation of custom firmware on consoles that currently have Homebrew Launcher access through Pokémon Picross or Steel Diver: Sub Wars.<br>
 Installing custom firmware is necessary in order to dump cartridges, mod games, and to use CIA installers like FBI.<br>
-This page is temporary until a proper page exists on <a href="https://3ds.hacks.guide">https://3ds.hacks.guide</a> and is not intended to be a full custom firmware installation guide.</p>
+This page exists as a user-readable guide until <a href="https://github.com/hacks-guide/Guide_3DS/pull/1765">this pull request</a> is merged. It is not intended to be a full custom firmware installation guide.
+This method is preferable to Frogtool as it does not require torrenting or navigating Flipnote.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>This guide assumes that you currently have Homebrew Launcher access through Pokémon Picross or Steel Diver.<br>
 <strong>If your console does not currently have Homebrew Launcher access, you should follow <a href="https://3ds.hacks.guide">3ds.hacks.guide</a> instead.</strong></p>
@@ -111,7 +112,10 @@ This page is temporary until a proper page exists on <a href="https://3ds.hacks.
 </ul>
 <h2 id="section-i-prep-work">Section I  - Prep Work</h2>
 <ol>
-<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card, replacing any existing files</li>
+<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card, replacing any existing files<ul>
+<li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
+</ul>
+</li>
 <li>Create a folder named <code>3ds</code> on the root of your SD card if it does not already exist</li>
 <li>Copy the <code>slotTool</code> folder from the unSAFE_MODE <code>.zip</code> (<code>RELEASE_v1.1.zip</code>) to the <code>3ds</code> folder</li>
 <li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
@@ -119,13 +123,17 @@ This page is temporary until a proper page exists on <a href="https://3ds.hacks.
 <h2 id="section-ii-slottool">Section II - slotTool</h2>
 <ol>
 <li>Power on your device</li>
-<li>Open the Homebrew Launcher through your homebrew entrypoint (Pokémon Picross or Steel Diver: Sub Wars)</li>
-<li>Launch slotTool from the list of homebrew<ul>
-<li>If you get stuck on a red screen, force power off the console by holding the power button for fifteen seconds, then retry this section</li>
+<li>Open the Homebrew Launcher through your homebrew entrypoint (Pokémon Picross or Steel Diver: Sub Wars)<ul>
+<li>This may take a few tries</li>
+</ul>
+</li>
+<li>Launch slotTool v1.4 from the list of homebrew<ul>
+<li>If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section</li>
 </ul>
 </li>
 <li>Select the "INSTALL exploit to wifi slots 1,2,3 &amp; shutdown" option<ul>
 <li>You will see some on-screen text and then your system will shutdown</li>
+<li>If the on-screen text says FAIL, verify that the <code>/3ds/slotTool/</code> directory has both <code>slotTool.3dsx</code> and <code>slotTool.xml</code></li>
 </ul>
 </li>
 </ol>
@@ -141,24 +149,27 @@ This page is temporary until a proper page exists on <a href="https://3ds.hacks.
 </li>
 <li>Press "I accept" to accept the terms and conditions</li>
 <li>The update will eventually fail, with error code <code>003-1099</code>. This is intended behaviour<ul>
-<li>If the update does not fail, ensure that you correctly overwrote the otherapp payload, then redo Section II</li>
+<li>If the update does not fail, verify that all three of your internet connection settings have been replaced with Haxxxxxxxxxx, then try again</li>
 </ul>
 </li>
 <li>When asked "Would you like to configure Internet settings?", select "Yes"</li>
 <li>On the following menu, navigate to <code>Connection 1</code> -&gt; <code>Change Settings</code> -&gt; <code>Next Page (right arrow)</code> -&gt; <code>Proxy Settings</code> -&gt; <code>Detailed Setup</code></li>
 <li>Once you see <code>B9S install SUCCESS</code> on the top screen, press any button to reboot to Luma Configuration<ul>
-<li>If you are stuck on the <code>B9S install SUCCESS</code> screen, it is safe to forcefully power off the console by holding the power button for 15 seconds</li>
+<li>If you are stuck on the <code>B9S install SUCCESS</code> screen, it is safe to forcefully turn off the console by holding the power button for 15 seconds</li>
+<li>If you do not see the <code>B9S install SUCCESS</code> screen, ensure that <code>usm.bin</code> is on the root of the SD card, then try again</li>
 </ul>
 </li>
 </ol>
 <h2 id="section-iv-configuring-luma3ds">Section IV - Configuring Luma3DS</h2>
 <ol>
 <li>Your device should automatically show the Luma Configuration menu<ul>
+<li>If you do not see the Luma Configuration menu, turn off the console and hold SELECT while turning on the console to access it</li>
 <li>If the power light turns on and off, ensure that <code>boot.firm</code> is on the root of the SD card</li>
 </ul>
 </li>
 <li>Use the (A) button and the D-Pad to turn on the following:<ul>
 <li><strong>"Show NAND or user string in System Settings"</strong></li>
+<li><code>(x)</code> indicates that the option has been turned on</li>
 </ul>
 </li>
 <li>Press (Start) to save and reboot<ul>
@@ -169,7 +180,10 @@ This page is temporary until a proper page exists on <a href="https://3ds.hacks.
 <h2 id="section-v-restoring-wifi-configuration-profiles">Section V - Restoring WiFi Configuration Profiles</h2>
 <ol>
 <li>Launch the Download Play application </li>
-<li>Wait until you see the two buttons</li>
+<li>Wait until you see the two buttons<ul>
+<li>Do not select either of the options</li>
+</ul>
+</li>
 <li>Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu</li>
 <li>Select "Miscellaneous options"</li>
 <li>Select "Switch the hb. title to the current app."</li>
@@ -250,5 +264,5 @@ This page is temporary until a proper page exists on <a href="https://3ds.hacks.
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-07-27 03:56:57.701647+00:00
+Build Date UTC : 2020-07-27 08:41:53.739579+00:00
 -->
