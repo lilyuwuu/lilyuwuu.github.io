@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="An English patch guide for a crazy Japanese drumming game">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Taiko 3DS2 English Patch - Guides</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Guides</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../slottool/" class="nav-link">3DS slotTool Guide</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Taiko 3DS2 English Patch</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../slottool/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#taiko-3ds2-english-patch-guide" class="nav-link">Taiko 3DS2 English Patch Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#what-this-guide-will-do" class="nav-link">What this guide will do</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What you need</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-i-prep-work" class="nav-link">Section I - Prep Work</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iia-dumping-romfs-digital" class="nav-link">Section IIa - Dumping RomFS (digital)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iib-dumping-romfs-cartridge" class="nav-link">Section IIb - Dumping RomFS (cartridge)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iii-patching-the-game" class="nav-link">Section III - Patching the game</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iv-installing-the-patch" class="nav-link">Section IV - Installing the patch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-v-finalizing-setup" class="nav-link">Section V - Finalizing setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="taiko-3ds2-english-patch-guide">Taiko 3DS2 English Patch Guide</h1>
+<p>This page provides instructions to apply the English patch of Taiko no Tatsujin: Don to Katsu no Jikuu Daibouken ("Taiko no Tatsujin: Don and Katsu's Spacetime Adventure").<br>
+The guide that currently exists for this game was written in 2016, so the patching methods that it gives are no longer recommended. For example:</p>
+<ul>
+<li>HANS is no longer used at all.</li>
+<li>HackingToolkit9DS is no longer necessary.</li>
+<li>LayeredFS and locale does not need to be set up through NTR.</li>
+<li>Pre-patching CIAs is no longer preferable.</li>
+</ul>
+<h2 id="what-this-guide-will-do">What this guide will do</h2>
+<p>This guide will:</p>
+<ul>
+<li>Install the English patch of this game in a way where it can be easily disabled at will</li>
+<li>Fix DLC if it is installed, hopefully</li>
+</ul>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li>A clean copy of Taiko no Tatsujin: Don to Katsu no Jikuu Daibouken (cartridge or digitally installed)</li>
+<li>Update 1.1 of the game already installed</li>
+<li>The <a href="https://gbatemp.net/threads/wip-taiko-no-tatsujin-don-to-katsu-no-jikuu-daibouken-english-translation.414805/">English patch</a> (<code>ROMFS English Menu Patch Version 1.1</code>)</li>
+<li>A modded Nintendo 3DS running modern CFW and tools (At the time of writing, the newest versions are Luma 10.2 and GodMode9 1.9.1)<ul>
+<li>This guide should technically work with Luma versions as old as 7.0 and GodMode9 versions as old as 1.2.7, but if you have an ancient setup, you should take some time to update it</li>
+</ul>
+</li>
+<li>The <a href="https://github.com/Possum/LumaLocaleSwitcher/releases">0.04 nightly</a> release of Luma Locale Switcher (<code>LumaLocaleSwitcher-0.04-NIGHTLY.cia</code>)</li>
+</ul>
+<h2 id="section-i-prep-work">Section I - Prep Work</h2>
+<ol>
+<li>Place <code>LumaLocaleSwitcher-0.04-NIGHTLY.cia</code> in the <code>/cias/</code> folder<ul>
+<li>Create the folder if it does not already exist</li>
+</ul>
+</li>
+<li>Extract <code>ROMFS Version 1.1.zip</code> to your working directory<ul>
+<li>The result should be several XDelta and patching files in a folder named <code>ROMFS Version 1.1</code></li>
+</ul>
+</li>
+<li>Put the SD card into your 3DS</li>
+</ol>
+<h2 id="section-iia-dumping-romfs-digital">Section IIa - Dumping RomFS (digital)</h2>
+<p>The instructions detailed here apply to <strong>digital copies</strong> of the game. If you have a cartridge, please follow <strong>Section IIb</strong> instead.</p>
+<ol>
+<li>Turn off the console</li>
+<li>Hold the START button while booting to enter GodMode9</li>
+<li>Press (A) to select the <code>[A:] SYSNAND SD</code> drive</li>
+<li>Navigate to <code>title</code></li>
+<li>While <code>00040000</code> is highlighted, press (Right Shoulder) + (A)</li>
+<li>Select "Search for titles"<ul>
+<li>This may take a while if you have many titles</li>
+</ul>
+</li>
+<li>Press (A) on <code>0004000000102F00 ... .tmd</code> to select it</li>
+<li>Select "Open containing folder"</li>
+<li>Press (A) on <code>00000000.app</code> to select it</li>
+<li>Select "NCCH image options..."</li>
+<li>Select "Mount image to drive"</li>
+<li>Press (A) to enter the path</li>
+<li>Press (A) on <code>romfs.bin</code> to select it</li>
+<li>Select "Copy to 0:/gm9/out"<ul>
+<li>This will take a while</li>
+</ul>
+</li>
+<li>Transfer the <code>romfs.bin</code> file to the <code>ROMFS Version 1.1</code> folder on your computer<ul>
+<li>Do not eject the SD card without first unmounting it</li>
+</ul>
+</li>
+</ol>
+<h2 id="section-iib-dumping-romfs-cartridge">Section IIb - Dumping RomFS (cartridge)</h2>
+<p>The instructions detailed here apply to <strong>cartridge copies</strong> of the game. If you have already dumped the RomFS from a digital copy, proceed to <strong>Section III</strong>.</p>
+<ol>
+<li>Turn off the console</li>
+<li>Hold the START button while booting to enter GodMode9</li>
+<li>Insert the game cartridge</li>
+<li>Press (A) to select the <code>[C:] GAMECART</code> drive</li>
+<li>Press (A) to select <code>0004000000102F00_v0?.3ds</code><ul>
+<li>Trim/no trim does not matter</li>
+</ul>
+</li>
+<li>Select "NCSD image options..."</li>
+<li>Select "Mount image to drive"</li>
+<li>Press (A) to enter the path</li>
+<li>Press (A) on <code>romfs.bin</code> to select it</li>
+<li>Select "Copy to 0:/gm9/out"<ul>
+<li>This will take a while</li>
+</ul>
+</li>
+<li>Transfer the <code>romfs.bin</code> file to the <code>ROMFS Version 1.1</code> folder on your computer<ul>
+<li>Do not eject the SD card without first unmounting it</li>
+</ul>
+</li>
+</ol>
+<h2 id="section-iii-patching-the-game">Section III - Patching the game</h2>
+<ol>
+<li>Rename <code>romfs.bin</code> to <code>DecryptedRomFS.bin</code><ul>
+<li>Do not add the <code>.bin</code> extension if it does not appear</li>
+</ul>
+</li>
+<li>Run the relevant xdelta script for your operating system</li>
+<li>You should now have a <code>fullpatch v1.1_romfs.bin</code> file</li>
+</ol>
+<h2 id="section-iv-installing-the-patch">Section IV - Installing the patch</h2>
+<ol>
+<li>Copy <code>fullpatch v1.1_romfs.bin</code> to any directory on your 3DS SD card</li>
+<li>Navigate to the file in GodMode9, and press (A) to select it</li>
+<li>Select "Mount as ROMFS image"</li>
+<li>Press (A) to enter the path</li>
+<li>Press (Left Shoulder) + (D-Pad Right) to mark all files</li>
+<li>Press (Y) to place all of these files in your clipboard</li>
+<li>Press (B) to enter the main drives menu</li>
+<li>Navigate to <code>[0: SDCARD] -&gt; luma -&gt; titles -&gt; 0004000000102F00 -&gt; romfs</code><ul>
+<li>Create any folders that do not exist; there are sixteen characters in the Title ID</li>
+</ul>
+</li>
+<li>Press (Y) to copy paths<ul>
+<li>This will take a while</li>
+</ul>
+</li>
+<li>Exit GodMode9 by pressing the home button and selecting "Poweroff system"</li>
+</ol>
+<h2 id="section-v-finalizing-setup">Section V - Finalizing setup</h2>
+<ol>
+<li>Turn on the console while holding SELECT to show the Luma Configuration menu</li>
+<li>Select the option <code>Enable game patching</code><ul>
+<li>An (x) indicates that the option is enabled</li>
+</ul>
+</li>
+<li>Press the START button to save the configuration</li>
+<li>Open the FBI application on your 3DS</li>
+<li>Navigate to the <code>cias</code> folder</li>
+<li>Press (A) to select <code>LumaLocaleSwitcher-0.04-NIGHTLY.cia</code></li>
+<li>Select "Install and delete CIA"</li>
+<li>Exit the FBI application</li>
+<li>Open the Luma Locale Switcher application that is now on your home menu</li>
+<li>Press (A) To select "Titles"</li>
+<li>Select <code>太鼓の達人　どんとかつの時空大冒険</code></li>
+<li>Select "Change Region", and set the region to JPN</li>
+<li>Select "Change Language", and set the language to JP</li>
+</ol>
+<p>The patch should now be enabled, and DLC should now work if installed.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
