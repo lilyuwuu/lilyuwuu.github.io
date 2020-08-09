@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="A slotTool guide for people with Homebrew Launcher access">
+		<meta name="description" content="A full custom firmware installation guide for new3DS, from stock to boot9strap">
         
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>3DS slotTool Guide - Guides</title>
+        <title>3DS nbhax+slotTool Guide - Guides</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -34,7 +34,7 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">3DS Guides <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -43,7 +43,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">3DS slotTool Guide</a>
+    <a href="../slottool/" class="dropdown-item">3DS slotTool Guide</a>
 </li>
                                 </ul>
                             </li>
@@ -59,16 +59,6 @@
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a rel="prev" href="../nbhax/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../taiko3ds2/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -87,9 +77,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#3ds-slottool-guide" class="nav-link">3DS slotTool Guide</a>
+            <li class="nav-item" data-level="1"><a href="#3ds-nbhaxslottool-guide" class="nav-link">3DS nbhax+slotTool Guide</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#before-you-start" class="nav-link">Before you start</a>
+            <li class="nav-item" data-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -97,11 +87,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#section-i-prep-work" class="nav-link">Section I  - Prep Work</a>
+            <li class="nav-item" data-level="2"><a href="#section-i-prep-work" class="nav-link">Section I - Prep Work</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#section-ii-slottool" class="nav-link">Section II - slotTool</a>
+            <li class="nav-item" data-level="2"><a href="#section-ii-new-browserhax-slottool" class="nav-link">Section II - new-browserhax + slotTool</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -128,36 +118,54 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="3ds-slottool-guide">3DS slotTool Guide</h1>
-<p>This page is intended for the installation of custom firmware on consoles that currently have Homebrew Launcher access through <a href="../nbhax">Internet Browser</a>, Pokémon Picross, or Steel Diver: Sub Wars.<br>
-Installing custom firmware is necessary in order to dump cartridges, mod games, and to use CIA installers like FBI.<br>
-This page exists as a user-readable guide until <a href="https://github.com/hacks-guide/Guide_3DS/pull/1765">this pull request</a> is merged. It is not intended to be a full custom firmware installation guide.</p>
-<h2 id="before-you-start">Before you start</h2>
-<p>This guide assumes that you currently have Homebrew Launcher access through <a href="../nbhax">Internet Browser</a>, Pokémon Picross or Steel Diver.<br>
-<strong>If your console does not currently have Homebrew Launcher access, you should follow <a href="https://3ds.hacks.guide">3ds.hacks.guide</a> instead.</strong></p>
-<p><strong>Your left and right shoulder buttons must work in order to follow this guide. If either of those buttons is broken AND you already have your <code>movable.sed</code>, follow <a href="https://3ds.hacks.guide/installing-boot9strap-(frogtool).html">Frogtool</a> instead.</strong></p>
+<h1 id="3ds-nbhaxslottool-guide">3DS nbhax+slotTool Guide</h1>
+<p>This page will install <strong>custom firmware</strong> on USA/EUR/JPN <strong>New 3DS / New 2DS</strong> consoles using new-browserhax and slotTool. <strong>This guide will not work on an Old 3DS / Old 2DS</strong>.</p>
+<p>Old 3DS users should be following <a href="https://3ds.hacks.guide">3ds.hacks.guide</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In order to follow this guide, you must have:</p>
+<ul>
+<li>A New Nintendo 3DS / New Nintendo 2DS XL console in the USA, EUR, or JPN region on the latest firmware (11.13.0-45 U/E/J)<ul>
+<li>Old 3DS / Old 2DS consoles, as well as any console from KOR/TWN/CHN, will not be able to follow this guide</li>
+<li>A New 3DS / New 2DS XL has a second circle pad (C-Stick) on the right-hand side, as well as ZL/ZR buttons on the back</li>
+</ul>
+</li>
+<li>An SD card 2GB or larger, formatted as FAT32 with 32K clusters<ul>
+<li>If your SD card is 128GB or larger, format using 64K clusters</li>
+</ul>
+</li>
+<li>A working 3DS Internet Browser (new-browserhax)</li>
+<li>Working left and right shoulder buttons (slotTool)</li>
+</ul>
 <h2 id="what-you-need">What you need</h2>
 <ul>
+<li>The latest release of <a href="https://github.com/zoogie/new-browserhax/releases/latest">new-browserhax</a></li>
 <li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
 <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a></li>
 </ul>
-<h2 id="section-i-prep-work">Section I  - Prep Work</h2>
+<h2 id="section-i-prep-work">Section I - Prep Work</h2>
 <ol>
-<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card, replacing any existing files<ul>
+<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card<ul>
 <li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
 </ul>
 </li>
-<li>Create a folder named <code>3ds</code> on the root of your SD card if it does not already exist</li>
+<li>Create a folder named <code>3ds</code> on the root of your SD card</li>
 <li>Copy the <code>slotTool</code> folder from the unSAFE_MODE <code>.zip</code> (<code>RELEASE_v1.1.zip</code>) to the <code>3ds</code> folder</li>
 <li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
+<li>Copy the <strong>contents</strong> of the folder corresponding to your <strong>console's region</strong> inside of the new-browserhax <code>.zip</code> (<code>release_v1.0.zip</code>) to the root of your SD card<ul>
+<li><code>arm11code.bin</code> and <code>browserhax_hblauncher_ropbin_payload.bin</code></li>
+<li>If you are unsure of your console's region, you can find it in the version string in System Settings: U is USA, E is EUROPE, and J is JAPAN</li>
+</ul>
+</li>
 </ol>
-<p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_file.png" /><br>
-<img alt="Screenshot: root of SD card file placement" src="../../images/root_file.png" /></center></p>
-<h2 id="section-ii-slottool">Section II - slotTool</h2>
+<p><center><img alt="Screenshot: root of SD card" src="../../images/root_nbslot.png" /></center></p>
+<h2 id="section-ii-new-browserhax-slottool">Section II - new-browserhax + slotTool</h2>
 <ol>
 <li>Power on your device</li>
-<li>Open the Homebrew Launcher through your homebrew entrypoint (Internet Browser, Pokémon Picross, or Steel Diver: Sub Wars)<ul>
-<li>This may take a few tries</li>
+<li>Open the Internet Browser (<a href="../../images/browser_location.png">visual aid</a>)</li>
+<li>Type <code>https://zoogie.github.io/web/nbhax</code> into the address bar</li>
+<li>Your device should eventually load into the Homebrew Launcher<ul>
+<li>If your device freezes on a yellow screen, try again</li>
+<li>If your device freezes on a different coloured screen, or you see "An error has occurred", ensure that your file placement is correct and that you have selected the files corresponding to your console's region</li>
 </ul>
 </li>
 <li>Launch slotTool v1.4 from the list of homebrew<ul>
@@ -238,7 +246,7 @@ This page exists as a user-readable guide until <a href="https://github.com/hack
 <hr />
 <h2 id="credits">Credits</h2>
 <ul>
-<li><a href="https://github.com/ItsPizzaTime1501">ItsPizzaTime1501</a> for writing the majority of this guide</li>
+<li><a href="https://github.com/ItsPizzaTime1501">ItsPizzaTime1501</a> for writing the slotTool portion of this guide</li>
 <li><a href="https://github.com/zoogie/">zoogie</a> for creating these exploits</li>
 </ul></div>
             </div>
