@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="A custom firmware installation guide for New3DS, from stock to boot9strap">
+		<meta name="description" content="A custom firmware installation guide for New3DS users, from stock to boot9strap">
         
         
         
@@ -35,7 +35,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">3DS Guides <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Main 3DS Guides <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -48,11 +48,20 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other Guides <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
     <a href="../taiko3ds2/" class="dropdown-item">Taiko 3DS2 English Patch Guide</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../info/3dsmusicgames/" class="dropdown-item">3DS Music Games</a>
 </li>
                                 </ul>
                             </li>
@@ -80,6 +89,10 @@
             <li class="nav-item" data-level="1"><a href="#3ds-nbhaxslottool-guide" class="nav-link">3DS nbhax+slotTool Guide</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#safe-mode-test" class="nav-link">Safe Mode Test</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -119,23 +132,39 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="3ds-nbhaxslottool-guide">3DS nbhax+slotTool Guide</h1>
-<p>This page will install <strong>custom firmware</strong> on USA/EUR/JPN <strong>New 3DS / New 2DS</strong> consoles without the use of <code>movable.sed</code> using new-browserhax and slotTool. <strong>This guide will not work on an Old 3DS / Old 2DS</strong>.</p>
+<p>This page will install <strong>custom firmware</strong> on <strong>stock</strong> USA/EUR/JPN <strong>New 3DS / New 2DS</strong> consoles using new-browserhax and slotTool. <strong>This guide will not work on an Old 3DS / Old 2DS</strong>.</p>
 <p>Old 3DS users should be following <a href="https://3ds.hacks.guide">3ds.hacks.guide</a>.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>In order to follow this guide, you must have:</p>
 <ul>
 <li>A New Nintendo 3DS / New Nintendo 2DS XL console in the USA, EUR, or JPN region on the latest firmware (11.13.0-45 U/E/J)<ul>
-<li>Old 3DS / Old 2DS consoles, as well as any console from KOR/TWN/CHN, will not be able to follow this guide</li>
 <li>A New 3DS / New 2DS XL has a second circle pad (C-Stick) on the right-hand side, as well as ZL/ZR buttons on the back</li>
 </ul>
 </li>
-<li>An SD card 2GB or larger, formatted as FAT32 with 32K clusters<ul>
-<li>If your SD card is 128GB or larger, format using 64K clusters</li>
+<li>An SD card formatted as FAT32<ul>
+<li>If your SD card is smaller than 2GB, you will be unable to create a NAND backup, which is a critical backup file used in case of a catastrophic software issue</li>
 </ul>
 </li>
-<li>A working 3DS Internet Browser (new-browserhax)</li>
-<li>Working left and right shoulder buttons (slotTool)</li>
+<li>A working 3DS Internet Browser (used for new-browserhax)</li>
+<li>Working Safe Mode (used for slotTool)<ul>
+<li>Entering Safe Mode requires working left and right shoulder buttons</li>
 </ul>
+</li>
+</ul>
+<p>If you cannot fulfill any one of these prerequisites, STOP, as you will be unable to follow the entirety of this guide.</p>
+<h2 id="safe-mode-test">Safe Mode Test</h2>
+<p>The instructions provided here will test the console's ability to enter Safe Mode.</p>
+<ol>
+<li>With your system powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)<ul>
+<li>Keep holding the buttons until your console boots into Safe Mode</li>
+</ul>
+</li>
+<li>After some time, your console should show a System Update screen<ul>
+<li>This indicates that the console has successfully entered Safe Mode</li>
+</ul>
+</li>
+</ol>
+<p>If you boot into the Home Menu instead of the System Update screen, the console has failed to enter Safe Mode. Try repeating these instructions a few more times, ensuring that you've properly held all of the buttons for the proper amount of time before determining that Safe Mode is inaccessible.</p>
 <h2 id="what-you-need">What you need</h2>
 <ul>
 <li>The latest release of <a href="https://github.com/zoogie/new-browserhax/releases/latest">new-browserhax</a></li>
@@ -153,12 +182,12 @@
 <li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
 <li>Copy the <strong>contents</strong> of the folder corresponding to your <strong>console's region</strong> inside of the new-browserhax <code>.zip</code> (<code>release_v1.0.zip</code>) to the root of your SD card<ul>
 <li><code>arm11code.bin</code> and <code>browserhax_hblauncher_ropbin_payload.bin</code></li>
-<li>If you are unsure of your console's region, you can find it in the version string in System Settings: U is USA, E is EUROPE, and J is JAPAN</li>
+<li>If you are unsure of your console's region, you can find it in the final letter of the version string in System Settings: U is USA, E is EUROPE, and J is JAPAN</li>
 </ul>
 </li>
 </ol>
 <p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_file.png" /></center><br>
-<p><center><img alt="Screenshot: root of SD card" src="../../images/root_nbslot.png" /></center></p>
+<center><img alt="Screenshot: root of SD card" src="../../images/root_nbslot.png" /></center></p>
 <h2 id="section-ii-new-browserhax-slottool">Section II - new-browserhax + slotTool</h2>
 <ol>
 <li>Power on your device</li>

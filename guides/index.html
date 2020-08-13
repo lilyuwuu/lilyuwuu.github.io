@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Various 3DS-related guides and information">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Guides</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Guides landing page - Guides</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Guides</a>
+                <a class="navbar-brand" href="..">Guides</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -38,11 +38,11 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="guides/nbhax/" class="dropdown-item">New3DS new-browserhax Guide</a>
+    <a href="nbhax/" class="dropdown-item">New3DS new-browserhax Guide</a>
 </li>
                                     
 <li>
-    <a href="guides/slottool/" class="dropdown-item">3DS slotTool Guide</a>
+    <a href="slottool/" class="dropdown-item">3DS slotTool Guide</a>
 </li>
                                 </ul>
                             </li>
@@ -51,7 +51,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="guides/taiko3ds2/" class="dropdown-item">Taiko 3DS2 English Patch Guide</a>
+    <a href="taiko3ds2/" class="dropdown-item">Taiko 3DS2 English Patch Guide</a>
 </li>
                                 </ul>
                             </li>
@@ -60,7 +60,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="info/3dsmusicgames/" class="dropdown-item">3DS Music Games</a>
+    <a href="../info/3dsmusicgames/" class="dropdown-item">3DS Music Games</a>
 </li>
                                 </ul>
                             </li>
@@ -85,8 +85,16 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#homepage" class="nav-link">Homepage</a>
+            <li class="nav-item" data-level="1"><a href="#guides-landing-page" class="nav-link">Guides landing page</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#main-3ds-guides" class="nav-link">Main 3DS Guides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#other-guides" class="nav-link">Other Guides</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -94,11 +102,14 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="homepage">Homepage</h1>
-<p>Welcome to my personal website! I have a couple of 3DS-related guides hosted here.</p>
-<h3 id="contact-me">Contact me</h3>
-<p>discord: lily ♪#0208</p>
-<p>email: lily at this domain</p></div>
+<h1 id="guides-landing-page">Guides landing page</h1>
+<p>This page isn't linked anywhere! You either forgot to link to a specific guide, or you've been exploring.</p>
+<h2 id="main-3ds-guides">Main 3DS Guides</h2>
+<p><a href="nbhax">New3DS nbhax guide: Stock -&gt; HBL</a><br>
+<a href="slottool">3DS slotTool guide: HBL -&gt; CFW</a><br>
+<span style="color:darkred"><a href="nbhax-slottool">nbhax + slotTool guide: Stock -&gt; CFW</a> <strong>Note</strong>: This guide isn't in the navigation menu <em>on purpose</em>. It should only be linked if it is legitimately the best option for whomever needs help.</span></p>
+<h2 id="other-guides">Other Guides</h2>
+<p><a href="taiko3ds2">Taiko 3DS2 English Patch Guide</a></p></div>
             </div>
         </div>
 
@@ -107,10 +118,10 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
+        <script src="../js/base.js" defer></script>
 
         <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -155,8 +166,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2020-08-13 09:54:06.347075+00:00
--->
