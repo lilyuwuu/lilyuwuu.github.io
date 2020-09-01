@@ -4,12 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<meta name="description" content="A movable.sed-less custom firmware installation guide. You should only be linking this guide for unminable consoles or broken DSiWare Management menus.">
-        
+        <meta name="description" content="A movable.sed-less custom firmware installation guide. You should only be linking this guide to users with unminable consoles or broken DSiWare Management menus.">
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>browserhax+slotTool Guide</title>
+        <title>browserhax+slotTool Guide - Guides</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -183,7 +182,7 @@
 <li><strong>Old 3DS users only:</strong> The latest release of <a href="https://github.com/zoogie/old-browserhax/releases">old-browserhax</a></li>
 <li><strong>New 3DS users only:</strong> The latest release of <a href="https://github.com/zoogie/new-browserhax/releases">new-browserhax</a></li>
 <li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
-<li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a></li>
+<li>The latest release of <a href="../../assets/slotTool.3dsx">slotTool</a></li>
 </ul>
 <h2 id="section-i-prep-work">Section I - Prep Work</h2>
 <ol>
@@ -191,8 +190,11 @@
 <li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
 </ul>
 </li>
-<li>Create a folder named <code>3ds</code> on the root of your SD card</li>
-<li>Copy the <code>slotTool</code> folder from the unSAFE_MODE <code>.zip</code> (<code>RELEASE_v1.1.zip</code>) to the <code>3ds</code> folder</li>
+<li>Create a folder named <code>3ds</code> on the root of your SD card<ul>
+<li>This folder stores homebrew applications and data; it is different from the <code>Nintendo 3DS</code> folder that you probably aleady have</li>
+</ul>
+</li>
+<li>Copy <code>slotTool.3dsx</code> to the <code>3ds</code> folder</li>
 <li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
 <li>Copy the <strong>contents</strong> of the folder corresponding to your <strong>console's region</strong> inside of the browserhax <code>.zip</code> (<code>release_v1.0.zip</code>) to the root of your SD card<ul>
 <li><code>arm11code.bin</code> and <code>browserhax_hblauncher_ropbin_payload.bin</code></li>
@@ -200,8 +202,8 @@
 </ul>
 </li>
 </ol>
-<p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_file.png" /></center><br>
-<center><img alt="Screenshot: root of SD card" src="../../images/root_nbslot.png" /></center></p>
+<p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_noxml.png" /></center><br>
+<center><img alt="Screenshot: root of SD card" src="../../images/root_browserhax.png" /></center></p>
 <h2 id="section-ii-browserhax-slottool">Section II - browserhax + slotTool</h2>
 <ol>
 <li>Power on your device</li>
@@ -219,7 +221,6 @@
 </li>
 <li>Select the "INSTALL exploit to wifi slots 1,2,3 &amp; shutdown" option<ul>
 <li>You will see some on-screen text and then your system will shutdown</li>
-<li>If the on-screen text says FAIL, verify that the <code>/3ds/slotTool/</code> directory has both <code>slotTool.3dsx</code> and <code>slotTool.xml</code></li>
 </ul>
 </li>
 </ol>
@@ -287,7 +288,7 @@
 <h2 id="credits">Credits</h2>
 <ul>
 <li><a href="https://github.com/ItsPizzaTime1501">ItsPizzaTime1501</a> for writing the slotTool portion of this guide</li>
-<li><a href="https://github.com/zoogie/">zoogie</a> for creating these exploits</li>
+<li><a href="https://github.com/zoogie/">zoogie</a> for creating these exploits: <a href="https://github.com/zoogie/unSAFE_MODE">unSAFE_MODE</a>, <a href="https://github.com/zoogie/new-browserhax/">new-browserhax</a>, and <a href="https://github.com/zoogie/old-browserhax">old-browserhax</a></li>
 </ul></div>
             </div>
         </div>
