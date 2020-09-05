@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="A movable.sed-less custom firmware installation guide. You should only be linking this guide to users under extenuating circumstances, such as a broken DSiWare Management menu or an unminable console.">
+        <meta name="description" content="Follow 3ds.hacks.guide instead!">
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>browserhax+slotTool Guide - Guides</title>
+        <title>This page has been removed.</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,20 +33,12 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Main 3DS Guides <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../pichaxx/" class="dropdown-item">PicHaxx + slotTool Guide</a>
-</li>
-                                    
-<li>
-    <a href="./" class="dropdown-item active">browserhax+slotTool Guide</a>
-</li>
-                                    
-<li>
-    <a href="../slottool/" class="dropdown-item">slotTool Guide</a>
+    <a href="../slottool/" class="dropdown-item">3DS slotTool Guide</a>
 </li>
                                 </ul>
                             </li>
@@ -71,16 +63,6 @@
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a rel="prev" href="../pichaxx/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../slottool/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                     </ul>
                 </div>
             </div>
@@ -99,44 +81,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#3ds-browserhaxslottool-guide" class="nav-link">3DS browserhax+slotTool Guide</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+            <li class="nav-item" data-level="1"><a href="#this-page-has-been-removed" class="nav-link">This page has been removed.</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#safe-mode-test" class="nav-link">Safe Mode Test</a>
+            
+            <li class="nav-item" data-level="1"><a href="#click-here-to-go-to-3dshacksguide" class="nav-link">Click here to go to 3ds.hacks.guide</a>
               <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What you need</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#section-i-prep-work" class="nav-link">Section I - Prep Work</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#section-ii-browserhax-slottool" class="nav-link">Section II - browserhax + slotTool</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#section-iii-unsafe_mode" class="nav-link">Section III - unSAFE_MODE</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#section-iv-configuring-luma3ds" class="nav-link">Section IV - Configuring Luma3DS</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#section-v-restoring-wifi-configuration-profiles" class="nav-link">Section V - Restoring WiFi Configuration Profiles</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#credits" class="nav-link">Credits</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -144,153 +95,12 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="3ds-browserhaxslottool-guide">3DS browserhax+slotTool Guide</h1>
-<p>This page will install <strong>custom firmware</strong> on all stock 3DS family consoles with a region of USA / EUR / JPN. <strong>This guide will not work on consoles from KOR / TWN / CHN.</strong></p>
-<p>At this time, this guide is intended for HBL-access convenience (where it is easier to explain than Picross) and for unminable consoles of any sort. While this guide will work in under circumstances, it has been less rigorously tested than <a href="https://3ds.hacks.guide">the main guide</a>, so it should only be used in the named circumstances.</p>
-<p>To be very clear: Don't link this guide to each and every person aiming to install custom firmware. </p>
-<p>This guide will bring a console from stock to boot9strap by using old/new-browserhax to gain Homebrew Launcher access, and then by using slotTool to inject an exploited WiFi profile. Once the exploited WiFi profile has been injected, you will use Safe Mode (a recovery feature present on all 3DS consoles) to activate it.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>In order to follow this guide, you must have:</p>
-<ul>
-<li>Any 3DS or 2DS console in the USA, EUR, or JPN regions on the latest firmware (11.13.0-45-U/E/J)</li>
-<li>An SD card formatted as FAT32<ul>
-<li>If your SD card is smaller than 2GB, you will be unable to create a NAND backup, which is a critical backup file used in case of a catastrophic software issue</li>
-</ul>
-</li>
-<li>A working 3DS Internet Browser (used for browserhax)</li>
-<li>Working Safe Mode (used for slotTool)<ul>
-<li>Entering Safe Mode requires working left and right shoulder buttons</li>
-</ul>
-</li>
-</ul>
-<p>If you cannot fulfill any one of these prerequisites, STOP, as you will be unable to follow the entirety of this guide.</p>
-<h2 id="safe-mode-test">Safe Mode Test</h2>
-<p>The instructions provided here will test the console's ability to enter Safe Mode.</p>
-<ol>
-<li>With your system powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)<ul>
-<li>Keep holding the buttons until your console boots into Safe Mode</li>
-</ul>
-</li>
-<li>After some time, your console should show a System Update screen<ul>
-<li>This indicates that the console has successfully entered Safe Mode</li>
-</ul>
-</li>
-</ol>
-<p>If you boot into the Home Menu instead of the System Update screen, the console has failed to enter Safe Mode. Try repeating these instructions a few more times, ensuring that you've properly held all of the buttons for the proper amount of time before determining that Safe Mode is inaccessible.</p>
-<h2 id="what-you-need">What you need</h2>
-<ul>
-<li><strong>Old 3DS users only:</strong> The latest release of <a href="https://github.com/zoogie/old-browserhax/releases">old-browserhax</a></li>
-<li><strong>New 3DS users only:</strong> The latest release of <a href="https://github.com/zoogie/new-browserhax/releases">new-browserhax</a></li>
-<li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
-<li>The latest release of <a href="../../assets/slotTool.3dsx">slotTool</a></li>
-</ul>
-<h2 id="section-i-prep-work">Section I - Prep Work</h2>
-<ol>
-<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card<ul>
-<li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
-</ul>
-</li>
-<li>Create a folder named <code>3ds</code> on the root of your SD card<ul>
-<li>This folder stores homebrew applications and data; it is different from the <code>Nintendo 3DS</code> folder that you probably aleady have</li>
-</ul>
-</li>
-<li>Copy <code>slotTool.3dsx</code> to the <code>3ds</code> folder</li>
-<li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
-<li>Copy the <strong>contents</strong> of the folder corresponding to your <strong>console's region</strong> inside of the browserhax <code>.zip</code> (<code>release_v1.0.zip</code>) to the root of your SD card<ul>
-<li><code>arm11code.bin</code> and <code>browserhax_hblauncher_ropbin_payload.bin</code></li>
-<li>If you are unsure of your console's region, you can find it in the final letter of the version string in System Settings: U is USA, E is EUROPE, and J is JAPAN</li>
-</ul>
-</li>
-</ol>
-<p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_noxml.png" /></center><br>
-<center><img alt="Screenshot: root of SD card" src="../../images/root_browserhax.png" /></center></p>
-<h2 id="section-ii-browserhax-slottool">Section II - browserhax + slotTool</h2>
-<ol>
-<li>Power on your device</li>
-<li>Open the Internet Browser (<a href="../../images/browser_location.png">visual aid</a>)</li>
-<ul><li>Alternatively, scan <a href="http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L">this QR code</a></li></ul>
-<li>Type <code>https://zoogie.github.io/web/nbhax</code> into the address bar</li>
-<li>Click on the "PROCEED TO HAXX" button</li>
-<li>Your device should eventually load into the Homebrew Launcher<ul>
-<li>If your device freezes on a yellow screen, try again</li>
-<li>If your device freezes on a different coloured screen, or you see "An error has occurred", ensure that your file placement is correct and that you have selected the files corresponding to your console's region and model</li>
-</ul>
-</li>
-<li>Launch slotTool from the list of homebrew<ul>
-<li>If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section</li>
-</ul>
-</li>
-<li>Select the "INSTALL exploit to wifi slots 1,2,3 &amp; shutdown" option<ul>
-<li>You will see some on-screen text and then your system will shutdown</li>
-</ul>
-</li>
-</ol>
-<p><center><img alt="Screenshot: slotTool success" src="../../images/slottool_install.png" /></center></p>
-<h2 id="section-iii-unsafe_mode">Section III - unSAFE_MODE</h2>
-<ol>
-<li>With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)<ul>
-<li>Keep holding the buttons until your console boots into Safe Mode</li>
-</ul>
-</li>
-<li>Press "OK" to accept the update<ul>
-<li>There is no update. This is part of the exploit</li>
-</ul>
-</li>
-<li>Press "I accept" to accept the terms and conditions</li>
-<li>The update will eventually fail, with error code <code>003-1099</code>. This is intended behaviour
-<center><img alt="Screenshot: 003-1099" src="../../images/003-1099.png" /></center><br></li>
-<li>When asked "Would you like to configure Internet settings?", select "Yes"</li>
-<li>On the following menu, navigate to <code>Connection 1</code> -&gt; <code>Change Settings</code> -&gt; <code>Next Page (right arrow)</code> -&gt; <code>Proxy Settings</code> -&gt; <code>Detailed Setup</code> (<a href="/../images/safemode_highlighted.png">visual aid</a>)</li>
-<li>Once you see <code>B9S install SUCCESS</code> on the top screen, press any button to reboot to Luma Configuration<ul>
-<li>If you are stuck on the <code>B9S install SUCCESS</code> screen, it is safe to forcefully turn off the console by holding the power button for 15 seconds</li>
-</ul>
-</li>
-</ol>
-<h2 id="section-iv-configuring-luma3ds">Section IV - Configuring Luma3DS</h2>
-<ol>
-<li>Your device should automatically show the Luma Configuration menu<ul>
-<li>If you do not see the Luma Configuration menu, turn off the console and hold SELECT while turning on the console to access it</li>
-</ul>
-</li>
-<li>Use the (A) button and the D-Pad to turn on the following:<ul>
-<li><strong>"Show NAND or user string in System Settings"</strong></li>
-<li><code>(x)</code> indicates that the option has been turned on</li>
-</ul>
-</li>
-<li>Press (Start) to save and reboot<ul>
-<li>Your device should load the Home Menu after a short delay</li>
-</ul>
-</li>
-</ol>
-<h2 id="section-v-restoring-wifi-configuration-profiles">Section V - Restoring WiFi Configuration Profiles</h2>
-<ol>
-<li>Launch the Download Play application </li>
-<li>Wait until you see the two buttons<ul>
-<li>Do not select either of the options</li>
-</ul>
-</li>
-<li>Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu</li>
-<li>Select "Miscellaneous options"</li>
-<li>Select "Switch the hb. title to the current app."</li>
-<li>Press (B) to continue</li>
-<li>Press (B) to return to the Rosalina main menu</li>
-<li>Press (B) to exit the Rosalina menu</li>
-<li>Press (Home), then close Download Play</li>
-<li>Launch the Download Play application</li>
-<li>Your device should load the Homebrew Launcher</li>
-<li>Launch slotTool from the list of homebrew</li>
-<li>Select "RESTORE original wifi slots 1,2,3"</li>
-<li>Your device will reboot</li>
-</ol>
-<p><center><img alt="Screenshot: slotTool removal" src="../../images/slottool_remove.png" /></center></p>
+<h1 id="this-page-has-been-removed">This page has been removed.</h1>
+<p>3ds.hacks.guide has been updated to make browserhax + slotTool the primary method -- you should follow that instead.</p>
 <hr />
-<h3 id="continue-to-finalizing-setup"><center><strong>Continue to <a href="https://3ds.hacks.guide/finalizing-setup">Finalizing Setup</a></strong></center></h3>
+<h1 id="click-here-to-go-to-3dshacksguide"><center><a href="https://3ds.hacks.guide">Click here to go to 3ds.hacks.guide</a></center></h1>
 <hr />
-<h2 id="credits">Credits</h2>
-<ul>
-<li><a href="https://github.com/ItsPizzaTime1501">ItsPizzaTime1501</a> for writing the slotTool portion of this guide</li>
-<li><a href="https://github.com/zoogie/">zoogie</a> for creating these exploits: <a href="https://github.com/zoogie/unSAFE_MODE">unSAFE_MODE</a>, <a href="https://github.com/zoogie/new-browserhax/">new-browserhax</a>, and <a href="https://github.com/zoogie/old-browserhax">old-browserhax</a></li>
-</ul></div>
+<p>If you <em>really</em> want the old guide, it's available <a href="../old/browserhax">here</a>.</p></div>
             </div>
         </div>
 
