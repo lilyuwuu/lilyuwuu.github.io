@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>This page has been removed. - Guides</title>
+        <title>PicHaxx+slotTool Guide - Guides</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,7 +33,7 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Main 3DS Guides <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -42,7 +42,7 @@
 </li>
                                     
 <li>
-    <a href="../browserhax-twn-chn/" class="dropdown-item">TWN/CHN 3DS browserhax Guide</a>
+    <a href="./" class="dropdown-item active">PicHaxx+slotTool Guide</a>
 </li>
                                 </ul>
                             </li>
@@ -67,6 +67,16 @@
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../slottool/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../taiko3ds2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -85,13 +95,44 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#this-page-has-been-removed" class="nav-link">This page has been removed.</a>
+            <li class="nav-item" data-level="1"><a href="#3ds-pichaxxslottool-guide" class="nav-link">3DS PicHaxx+slotTool guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#before-you-start" class="nav-link">Before you start</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-level="1"><a href="#click-here-to-go-to-3dshacksguide" class="nav-link">Click here to go to 3ds.hacks.guide</a>
+            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What you need</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-i-prep-work" class="nav-link">Section I - Prep Work</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-ii-pichaxx" class="nav-link">Section II - PicHaxx</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iii-slottool" class="nav-link">Section III - slotTool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-iv-unsafe_mode" class="nav-link">Section IV - unSAFE_MODE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-v-configuring-luma3ds" class="nav-link">Section V - Configuring Luma3DS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-vi-restoring-wifi-configuration-profiles" class="nav-link">Section VI - Restoring WiFi Configuration Profiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#credits" class="nav-link">Credits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -99,12 +140,153 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="this-page-has-been-removed">This page has been removed.</h1>
-<p>With the introduction of browserhax as a main method on 3ds.hacks.guide, there is now very little / no use case for this guide.</p>
+<h1 id="3ds-pichaxxslottool-guide">3DS PicHaxx+slotTool guide</h1>
+<p>This page combines the PicHaxx and slotTool guides into one page and uses an alternate PicHaxx injector site so that anyone helping will only need to link one page rather than three.</p>
+<p>This guide will bring a console from stock to boot9strap using PicHaxx to gain Homebrew Launcher access, and then using slotTool to inject an exploited WiFi profile. Once the exploited WiFi profile has been injected, you will use Safe Mode (a recovery feature present on all 3DS consoles) to activate it.</p>
+<h2 id="before-you-start">Before you start</h2>
+<p>You should only be following this page if:</p>
+<ul>
+<li>Your DSiWare Management menu is inaccessible (it crashes almost immediately when you try to open it)</li>
+<li>Your left and right shoulder buttons work</li>
+<li>You have your <code>movable.sed</code> file, or can easily obtain it</li>
+</ul>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li>The free eShop game "Pokémon Picross"</li>
+<li>Your <code>movable.sed</code> file from completing <a href="https://3ds.hacks.guide/seedminer">Seedminer</a></li>
+<li>The <a href="https://deadphoenix8091.github.io/3ds/#otherapp">otherapp payload</a> corresponding to your device type and region</li>
+<li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
+<li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a></li>
+</ul>
+<h2 id="section-i-prep-work">Section I - Prep Work</h2>
+<ol>
+<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card<ul>
+<li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
+</ul>
+</li>
+<li>Copy the otherapp payload to the root of your SD card and rename it to <code>otherapp.bin</code><ul>
+<li>If you do not see the <code>.bin</code> extension, do not add it to the end of the filename</li>
+</ul>
+</li>
+<li>Create a folder named <code>3ds</code> on the root of your SD card if it does not already exist</li>
+<li>Copy the <code>slotTool</code> folder from the unSAFE_MODE <code>.zip</code> (<code>RELEASE_v1.1.zip</code>) to the <code>3ds</code> folder</li>
+<li>Copy <code>usm.bin</code> from the unSAFE_MODE <code>.zip</code> to the root of your SD card</li>
+</ol>
+<p><center><img alt="Screenshot: /3ds/slotTool/ file placement" src="../../images/slottool_file.png" /><br>
+<img alt="Screenshot: root of SD card file placement" src="../../images/root_file.png" /></center></p>
+<h2 id="section-ii-pichaxx">Section II - PicHaxx</h2>
+<ol>
+<li>Open <a href="https://3ds.nhnarwhal.com/3dstools/pichaxx.php">the PicHaxx Save Tool website</a> on your computer/mobile device</li>
+<li>Select your <code>movable.sed</code> file</li>
+<li>Select "Build and Download"</li>
+<li>Wait for the process to complete<ul>
+<li>You should receive a file named <code>00000001.sav</code></li>
+</ul>
+</li>
+<li>Navigate to <code>Nintendo 3DS</code> -&gt; <code>&lt;ID0&gt;</code> -&gt; <code>&lt;ID1&gt;</code> -&gt; <code>title</code> -&gt; <code>00040000</code> -&gt; <code>0017c100</code> -&gt; <code>data</code> on your SD card<ul>
+<li>This <code>&lt;ID0&gt;</code> will be the same one that you used in Seedminer</li>
+<li>This <code>&lt;ID1&gt;</code> folder will be another 32 letter/number folder inside the <code>&lt;ID0&gt;</code> folder</li>
+</ul>
+</li>
+<li>Copy the downloaded <code>00000001.sav</code> file to the <code>data</code> folder on your SD card<ul>
+<li>Overwrite the old save file when prompted</li>
+</ul>
+</li>
+<li>Reinsert your SD card into your device</li>
+</ol>
+<p><center><img alt="Screenshot: PicHaxx save file placement" src="../../images/pichaxx_savefile.png" /></center></p>
+<h2 id="section-iii-slottool">Section III - slotTool</h2>
+<ol>
+<li>Power on your device</li>
+<li>Launch "Pokémon Picross"</li>
+<li>After a few seconds, you should see the Homebrew Launcher<ul>
+<li>If you get a yellow screen, force power off the console, then try again</li>
+<li>If you get any other colour of screen, the game launches normally, or the game crashes, ensure that your otherapp payload is correct and that you have copied all files (<code>boot.3dsx</code>, <code>00000001.sav</code>) to the correct locations</li>
+</ul>
+</li>
+<li>Launch slotTool v1.4 from the list of homebrew<ul>
+<li>If you get stuck on a red screen, forcefully power off the console by holding the power button for fifteen seconds, then retry this section</li>
+</ul>
+</li>
+<li>Select the "INSTALL exploit to wifi slots 1,2,3 &amp; shutdown" option<ul>
+<li>You will see some on-screen text and then your system will shutdown</li>
+<li>If the on-screen text says FAIL, verify that the <code>/3ds/slotTool/</code> directory has both <code>slotTool.3dsx</code> and <code>slotTool.xml</code></li>
+</ul>
+</li>
+</ol>
+<p><center><img alt="Screenshot: slotTool success" src="../../images/slottool_install.png" /></center></p>
+<h2 id="section-iv-unsafe_mode">Section IV - unSAFE_MODE</h2>
+<ol>
+<li>With your system still powered off, hold the following buttons: (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)<ul>
+<li>Keep holding the buttons until your console boots into Safe Mode</li>
+</ul>
+</li>
+<li>Press "OK" to accept the update<ul>
+<li>There is no update. This is part of the exploit</li>
+</ul>
+</li>
+<li>Press "I accept" to accept the terms and conditions</li>
+<li>The update will eventually fail, with error code <code>003-1099</code>. This is intended behaviour<ul>
+<li>If the update does not fail, verify that all three of your internet connection settings have been replaced with Haxxxxxxxxxx, then try again<br>
+<center><img alt="Screenshot: 003-1099" src="../../images/003-1099.png" /></center><br></li>
+</ul>
+</li>
+<li>When asked "Would you like to configure Internet settings?", select "Yes"</li>
+<li>On the following menu, navigate to <code>Connection 1</code> -&gt; <code>Change Settings</code> -&gt; <code>Next Page (right arrow)</code> -&gt; <code>Proxy Settings</code> -&gt; <code>Detailed Setup</code> (<a href="../../images/safemode_highlighted.png">visual aid</a>)</li>
+<li>Once you see <code>B9S install SUCCESS</code> on the top screen, press any button to reboot to Luma Configuration<ul>
+<li>If you are stuck on the <code>B9S install SUCCESS</code> screen, it is safe to forcefully turn off the console by holding the power button for 15 seconds</li>
+<li>If you do not see the <code>B9S install SUCCESS</code> screen, ensure that <code>usm.bin</code> is on the root of the SD card, then try again</li>
+</ul>
+</li>
+</ol>
+<h2 id="section-v-configuring-luma3ds">Section V - Configuring Luma3DS</h2>
+<ol>
+<li>Your device should automatically show the Luma Configuration menu<ul>
+<li>If you do not see the Luma Configuration menu, turn off the console and hold SELECT while turning on the console to access it</li>
+<li>If the power light turns on and off, ensure that <code>boot.firm</code> is on the root of the SD card</li>
+</ul>
+</li>
+<li>Use the (A) button and the D-Pad to turn on the following:<ul>
+<li><strong>"Show NAND or user string in System Settings"</strong></li>
+<li><code>(x)</code> indicates that the option has been turned on</li>
+</ul>
+</li>
+<li>Press (Start) to save and reboot<ul>
+<li>Your device should load the Home Menu after a short delay</li>
+</ul>
+</li>
+</ol>
+<h2 id="section-vi-restoring-wifi-configuration-profiles">Section VI - Restoring WiFi Configuration Profiles</h2>
+<ol>
+<li>Launch the Download Play application </li>
+<li>Wait until you see the two buttons<ul>
+<li>Do not select either of the options</li>
+</ul>
+</li>
+<li>Press (Left Shoulder) + (D-Pad Down) + (Select) at the same time to open the Rosalina menu</li>
+<li>Select "Miscellaneous options"</li>
+<li>Select "Switch the hb. title to the current app."</li>
+<li>Press (B) to continue</li>
+<li>Press (B) to return to the Rosalina main menu</li>
+<li>Press (B) to exit the Rosalina menu</li>
+<li>Press (Home), then close Download Play</li>
+<li>Launch the Download Play application</li>
+<li>Your device should load the Homebrew Launcher</li>
+<li>Launch slotTool from the list of homebrew</li>
+<li>Select "RESTORE original wifi slots 1,2,3"</li>
+<li>Your device will reboot
+<center><img alt="Screenshot: slotTool removal" src="../../images/slottool_remove.png" /></center></li>
+</ol>
 <hr />
-<h1 id="click-here-to-go-to-3dshacksguide"><center><a href="https://3ds.hacks.guide">Click here to go to 3ds.hacks.guide</a></center></h1>
+<h3 id="continue-to-finalizing-setup"><center><strong>Continue to <a href="https://3ds.hacks.guide/finalizing-setup">Finalizing Setup</a></strong></center></h3>
 <hr />
-<p>If you <em>really</em> want the old guide, it's available <a href="../old/pichaxx">here</a>.</p></div>
+<h2 id="credits">Credits</h2>
+<ul>
+<li><a href="https://github.com/ItsPizzaTime1501">ItsPizzaTime1501</a> for writing the slotTool portion of this guide</li>
+<li><a href="https://github.com/hacks-guide/Guide_3DS">3ds.hacks.guide</a> for the original PicHaxx guide</li>
+<li><a href="https://github.com/zoogie/">zoogie</a> for creating unSAFE_MODE/slotTool</li>
+<li>RandalHoffman (MechanicalDragon) for the alternate PicHaxx Injector website</li>
+</ul></div>
             </div>
         </div>
 
