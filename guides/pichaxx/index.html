@@ -141,12 +141,11 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="3ds-pichaxxslottool-guide">3DS PicHaxx+slotTool guide</h1>
-<p>This page combines the PicHaxx and slotTool guides into one page and uses an alternate PicHaxx injector site so that anyone helping will only need to link one page rather than three.</p>
 <p>This guide will bring a console from stock to boot9strap using PicHaxx to gain Homebrew Launcher access, and then using slotTool to inject an exploited WiFi profile. Once the exploited WiFi profile has been injected, you will use Safe Mode (a recovery feature present on all 3DS consoles) to activate it.</p>
 <h2 id="before-you-start">Before you start</h2>
 <p>You should only be following this page if:</p>
 <ul>
-<li>Your DSiWare Management menu is inaccessible (it crashes almost immediately when you try to open it)</li>
+<li>Your DSiWare Management menu is inaccessible after improperly uninstalling CFW (it crashes almost immediately when you try to open it)</li>
 <li>Your left and right shoulder buttons work</li>
 <li>You have your <code>movable.sed</code> file, or can easily obtain it</li>
 </ul>
@@ -154,13 +153,16 @@
 <ul>
 <li>The free eShop game "Pokémon Picross"</li>
 <li>Your <code>movable.sed</code> file from completing <a href="https://3ds.hacks.guide/seedminer">Seedminer</a></li>
-<li>The <a href="https://deadphoenix8091.github.io/3ds/#otherapp">otherapp payload</a> corresponding to your device type and region</li>
+<li>The <a href="https://deadphoenix8091.github.io/3ds/#otherapp">otherapp payload</a> corresponding to your device type, region, and version<ul>
+<li>If your current version is 11.14.0-46, select 11.13.0-45 in the dropdown menu</li>
+</ul>
+</li>
 <li>The latest release of <a href="https://github.com/LumaTeam/Luma3DS/releases/latest">Luma3DS</a></li>
 <li>The latest release of <a href="https://github.com/zoogie/unSAFE_MODE/releases/latest">unSAFE_MODE</a></li>
 </ul>
 <h2 id="section-i-prep-work">Section I - Prep Work</h2>
 <ol>
-<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.zip</code>) to the root of your SD card<ul>
+<li>Copy <code>boot.firm</code> and <code>boot.3dsx</code> from the Luma3DS <code>.zip</code> (<code>Luma3DSv10.2.1.zip</code>) to the root of your SD card<ul>
 <li>The root of the SD card refers to the initial directory on your SD card where you can see the <code>Nintendo 3DS</code> folder, but are not inside of it</li>
 </ul>
 </li>
