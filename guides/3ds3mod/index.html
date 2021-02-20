@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Taiko 3DS3 Song Mod Guide - Guides</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Guides</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Main 3DS Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../browserhax/" class="dropdown-item">New 3DS browserhax-xl Guide</a>
+</li>
+                                    
+<li>
+    <a href="../slottool/" class="dropdown-item">3DS slotTool Guide</a>
+</li>
+                                    
+<li>
+    <a href="../pichaxx/" class="dropdown-item">PicHaxx+slotTool Guide</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Other Guides <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../taiko3ds2/" class="dropdown-item">Taiko 3DS2 English Patch Guide</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Taiko 3DS3 Song Mod Guide</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../info/3dsmusicgames/" class="dropdown-item">3DS Music Games</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a rel="prev" href="../taiko3ds2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../info/3dsmusicgames/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#adding-custom-songs-to-taiko-3ds3" class="nav-link">Adding Custom Songs to Taiko 3DS3</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-you-need" class="nav-link">What you need</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-1-setting-your-computer-locale" class="nav-link">Section -1: Setting your computer locale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-0-enabling-file-extensions" class="nav-link">Section 0: Enabling file extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-1-correctly-encoding-your-tja-file" class="nav-link">Section 1: Correctly encoding your TJA file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-2-running-your-tja-through-okku-converter" class="nav-link">Section 2: Running your TJA through Okku Converter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#section-3-replacing-a-song-with-your-converted-file" class="nav-link">Section 3: Replacing a song with your converted file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="adding-custom-songs-to-taiko-3ds3">Adding Custom Songs to Taiko 3DS3</h1>
+<p>This tutorial covers adding custom songs into Taiko 3DS3 ("Dokodon! Mystery Adventure") by converting from the text-based TJA format to Namco's fumen format. <strong>This is process is very manual -- there are currently no public tools that will speed this up.</strong></p>
+<p>This process works by <em>replacing</em> existing songs in the game. As this is done via LayeredFS, the replacement can be removed at any time. Note that since song names are image files, they are not dealt with by this converter.</p>
+<p>Before you start, please take note of a few things:</p>
+<ul>
+<li>Since you're <em>replacing</em> a song, this means that getting a greater score will result in the song no longer having a proper score. This is something you will not be able to fix, so it is highly recommended that you make a save backup with Checkpoint or JKSM before replacing any songs!</li>
+<li>Okku is incompatible with some charts and features, most notably <strong>charts with branched paths</strong>, <strong>scroll commands</strong>, and charts with over <strong>300 bars</strong> or <strong>13000 notes</strong>.</li>
+<li>Scoring and soul point calculation is pretty close to a realistic score, but it isn't anywhere near perfect. Take them with two and a half grains of salt.</li>
+<li>This guide only covers replacing base songs with custom ones.</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A modded 3DS running a modern CFW environment<ul>
+<li>These instructions should work on any Luma version with LayeredFS support (7.0 and greater), but anyone on older Luma versions should still update their setup to the latest.</li>
+</ul>
+</li>
+<li>A digital or cartridge copy of Taiko 3DS3 ("Taiko no Tatsujin: Dokodon! Mystery Adventure")</li>
+<li>Your TJA file</li>
+<li>A computer or virtual machine running a modern version of Windows<ul>
+<li>These instructions have been tested on Windows 10.</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-you-need">What you need</h2>
+<ul>
+<li>The latest release of <a href="https://www.teampapafox.org/projects/okku3ds.html">Okku</a><ul>
+<li>The download link is under the "Download Here" box.</li>
+<li>Okku's package comes in RAR format. The 3DS is known to have issues when files are extracted with WinRAR, so using <a href="https://7-zip.org">7-zip</a> is much preferred.</li>
+</ul>
+</li>
+</ul>
+<h2 id="section-1-setting-your-computer-locale">Section -1: Setting your computer locale</h2>
+<p>This section only needs to be performed once. If you have already done this, you can skip this section.</p>
+<p>As TJA files tend to come with Japanese text, files need to be extracted with a computer set to Japanese locale, or else you will create <a href="https://en.wikipedia.org/wiki/Mojibake">mojibake</a>. Naturally, this will create issues with the converter. Don't worry -- this won't change system language.</p>
+<ol>
+<li>Hit <strong>Windows key + R</strong> to open up the Run dialogue, enter <code>intl.cpl</code>, then click "OK".<p>
+<img style='border:2px solid #000000' src="../../images/taiko_1.png" /><p></li>
+<li>Click on <code>Adminstrative</code>, then <code>Change system locale</code>. You will need Administator access on you computer to do this.
+<img style='border:2px solid #000000' src="../../images/taiko_2.png" /><p><p>
+<img style='border:2px solid #000000' src="../../images/taiko_3.png" /><p></li>
+<li>Use the dropdown to change the system locale to <code>Japanese (Japan)</code>, then click OK. <strong>Ignore</strong> the <code>Use Unicode UTF-8 for worldwide language support</code> checkbox.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_4.png" /><p></li>
+<li>You will be prompted to restart your computer. Click <code>Restart now</code> to restart.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_5.png" /><p></li>
+</ol>
+<p>Your system's locale is now properly set.</p>
+<h2 id="section-0-enabling-file-extensions">Section 0: Enabling file extensions</h2>
+<p>For sanity's sake, file extensions should be enabled in case your file associations are weird. To do that, click "View" on any open File Explorer window, then click the checkbox for ~file name extensions`:<p>
+<img style='border:2px solid #000000' src="../../images/taiko_Ext.png" /></p>
+<h2 id="section-1-correctly-encoding-your-tja-file">Section 1: Correctly encoding your TJA file</h2>
+<p>Okku requires that TJA files are encoded as <strong>UTF-8</strong>. You can do this in bulk with a tool like <a href="https://www.kashim.com/kanjitranslator/">KanjiTranslator</a>. This tutorial covers manually re-encoding the file with Notepad.</p>
+<ol>
+<li>Double-click to open your TJA file with Notepad.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_6.png" /><p></li>
+<li>Click <code>File</code>, then <code>Save As</code>.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_7.png" /><p></li>
+<li>Change the encoding to <code>UTF-8</code>, then click <code>Save</code>.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_8.png" /><p></li>
+</ol>
+<p>Your TJA file is now properly encoded.</p>
+<h2 id="section-2-running-your-tja-through-okku-converter">Section 2: Running your TJA through Okku Converter</h2>
+<p>This section will convert your TJA file and audio into Namco's file and audio format so that it will work in a 3DS.</p>
+<ol>
+<li>Navigate to <code>3DSTaikoV### -&gt; Okku</code>, then double-click on <code>Okku_Converter.exe</code>. You should see a command prompt window open, followed by a File Explorer window.<ul>
+<li>If you don't, you may not have the VC Redistributable pack installed. Double-click on the <code>VC_redist.x86.exe</code> in the same directory and follow its installation instructions.</li>
+</ul>
+</li>
+<li>Navigate to the location of your TJA file, select it, then click <code>Open</code>.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_9.png" /><p></li>
+<li>Okku will display the song name, its subtitle, and its list of difficulties. Select the difficulty that you want converted.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_10.png" /><p></li>
+<li>Okku will show a few boxes, and should eventually output <code>Done!</code>, indicating it has succeeded. You can close Okku at this point. The converted files will be in the same directory as the original TJA and audio file.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_11.png" /></li>
+</ol>
+<h2 id="section-3-replacing-a-song-with-your-converted-file">Section 3: Replacing a song with your converted file</h2>
+<p>This section will replace an existing base song in Taiko 3DS3 with your newly converted file.</p>
+<ol>
+<li>Double-click on <code>3ds_Folder_structure.7z</code> inside of <code>3DSTaikoV###</code> and extract its contents to the root of your 3DS SD card.<ul>
+<li>The root of the SD card is the initial directory where you can see the Nintendo 3DS folder, but aren't inside of it.</li>
+<li>You can do this via FTP, but it'll be a lot slower as this involves transferring many small empty folders.</li>
+</ul>
+</li>
+<li>On the 3DS SD, navigate to <code>luma -&gt; titles -&gt; 0004000000190E00 -&gt; romfs -&gt; _data -&gt; sound -&gt; song</code>.</li>
+<li>This part is the hard part: You'll have to rename your converted <code>NAAC</code> files to the name of an actual existing song. The smaller file (<code>!!audio_s.naac</code>) is the sample, while the larger file (<code>!!audio.naac</code>) is the actual song. Don't mix these up.<ul>
+<li>Namco's song IDs aren't always easy to work out, so it may be difficult to work out what you should name the file. Check the <a href="https://www.wikihouse.com/taiko/index.php?%B6%CAID%A4%DE%A4%C8%A4%E1">song list on wikihouse</a> for some help. For example, ハッピーシンセサイザ (Happy Synthesizer)'s song ID is <code>hapsyn</code>. That is the song I'll replace as an example.</li>
+<li>Avoid the songs that start with <code>3d3</code>, as the vast majority of them are for the story mode battles. </li>
+<li>The format of a normal song is <code>&lt;SONGID&gt;_3ds.naac</code> and <code>&lt;SONGID&gt;_3ds_s.naac</code>. For our example, <code>hapsyn_3ds.naac</code> and <code>hapsyn_3ds_s.naac</code>.</li>
+<li>A number of songs add extra text that aren't in the full song ID. These songs are:<ul>
+<li><code>83noma</code>, <code>calib3</code>, <code>clsmrs</code>, <code>himyak</code>, <code>honnou</code>, <code>iachil</code>, <code>koiama</code>, <code>mscl4</code>, <code>namcot</code>, <code>rlngig</code>, <code>ora3x</code>, <code>valk</code>, <code>xjapa2</code>, <code>ymyrp2</code>, <code>yokait</code>, <code>ywjdrm</code>: add <code>remst</code> -- example: <code>83noma_remst_3ds.naac</code></li>
+<li><code>alexan</code>, <code>clsbut</code>, <code>clsw</code>, <code>drsb</code>, <code>lost1g</code>: add <code>remst2</code> -- example: <code>alexan_remst2_3ds.naac</code></li>
+<li><code>goth</code>: add <code>resmt3</code> -- example: <code>goth_remst3_3ds.naac</code></li>
+</ul>
+</li>
+<li>See <a href="../../images/2Naac.png">this image</a> for an image of all song IDs.<p>
+My song replacement looks like this:
+<img style='border:2px solid #000000' src="../../images/taiko_12.png" /></li>
+</ul>
+</li>
+<li>On the 3DS SD, navigate to <code>luma -&gt; titles -&gt; 0004000000190E00 -&gt; romfs -&gt; _data -&gt; fumen -&gt; &lt;SONG ID OF THE SONG THAT YOU REPLACED&gt; -&gt; solo</code>. Rename your fumen file (<code>!!fumen.bin</code>) to <code>&lt;SONG ID&gt;_&lt;e/h/m/n&gt;.bin</code>.<ul>
+<li>e = easy/kantan, n = normal/futsuu, h = hard/muzukashii, m = extreme/oni. For our example, I'll name the file <code>hapsyn_m.bin</code> to replace the Happy Synthesizer's Oni chart.</li>
+<li>Don't worry -- you don't have to worry about <code>remst</code>/<code>remst2</code>/<code>remst3</code> in this section, as it does not apply. <code>yokait</code> would still be <code>yokait_m.bin</code>, not <code>yokait_remst_m.bin</code>.<p>
+<img style='border:2px solid #000000' src="../../images/taiko_13.png" /><p></li>
+</ul>
+</li>
+<li>Take out your SD card and put it into your 3DS. You're finally done! Don't forget to enable game patching via the Luma configuration menu (hold SELECT on boot).<p>
+<img alt="Final result" src="../../images/taiko_result.png" /></li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+
+        <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
